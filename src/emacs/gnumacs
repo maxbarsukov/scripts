@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+DISTRIBUTION="gnumacs"
+
+cd "$HOME"
+rm -vf .emacs
+rm -vf .emacs.d
+
+ln -sv "$HOME/.config/$DISTRIBUTION/.emacs.d" "$HOME/.emacs.d"
+ln -sv "$HOME/.config/$DISTRIBUTION/.emacs" "$HOME/.emacs"
+emacs

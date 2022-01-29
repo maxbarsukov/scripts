@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+DISTRIBUTION="doomacs"
+
+cd "$HOME"
+rm -vf .emacs
+rm -vf .emacs.d
+
+ln -sv "$HOME/.config/$DISTRIBUTION" "$HOME/.emacs.d"
+emacs
